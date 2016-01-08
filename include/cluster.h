@@ -65,7 +65,7 @@ namespace RedisCluster
         // and for pair SlotConnection(initial redis cluster connection applicable for slot range)
         // and for pair HostConnection(redis cluster connection, created for redirection purposes)
         typedef string Host;
-        typedef unsigned int SlotIndex;
+        typedef long long SlotIndex;
         typedef std::pair<SlotIndex, SlotIndex> SlotRange;
         typedef std::pair<SlotRange, redisConnection*> SlotConnection;
         typedef std::pair<Host, redisConnection*> HostConnection;
